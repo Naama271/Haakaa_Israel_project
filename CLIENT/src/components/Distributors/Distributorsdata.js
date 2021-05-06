@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import whatsapp from "./icons/whatsapp.png";
 import phone from "./icons/phone.png";
+import AddDistributor from "./AddDistributor"
 import "./dis.css";
 
 const Mashudata = ({ location }) => {
@@ -59,25 +60,7 @@ const Mashudata = ({ location }) => {
       <tbody>
       {display}
       </tbody>
-      <tfoot>
-      <tr>
-        הוספת מפיצה חדשה
-        </tr>
-      <tr>
-          <th>  <input type="text" placeholder="שם המפיצה"/></th>
-          <th>  <input type="text" placeholder="תפקיד מפיצה"/></th>
-          </tr>
-            <tr>
-          <th> <input type="text" placeholder="עיר/ איזור"/></th>
-          <th> <input type="text" placeholder="מספר פלאפון"/></th>
-          <th>  <select>
-    <option value="0">בחרי איזור</option>
-    <option value="north">צפון</option>
-    <option value="center">מרכז</option>
-    <option value="south">דרום</option>
-  </select></th>
-        </tr>
-</tfoot>
+        <AddDistributor />
     </table>
   );
 };
